@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>McTechDev</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Color+Emoji&display=swap" rel="stylesheet">-->
+    </head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <body>
+        <!--<div id="loadingscreen">
+            <div id="loader"></div>
+        </div>-->
+        <div id="pagecontainer">
+            <div id="page1" class="mainpage snaptop">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 id="hometext">McTechDev's Collection Of Projects :3</h1>
+                <h2 id="hometext2">Some of my cool coding projects, and now I'm MUCH better at frontend development lol</h2>
+                <br>
+                <h1 id="scrolltext">Scroll</h1>
+                <h1 id="scrollpointer">↓</h1>
+            </div>
+            <br>
+            <div id="page2" class="mainpage snapto">
+                <div id="projcontainer">
+                    <br>
+                    <div id="imgprev">
+                        <img id="prev" class="projectpreviewimg" src="img/projects/flow.png">
+                    </div>
+                    <div id="projectinfo">
+                        <h1 class="maintext">Flow</h1>
+                        <h2 class="maintext2">A cool little web animator</h2>
+                        <p id="projectdesc" class="maintext">
+    Flow is a little animator that I made, and I'm pretty proud of it!
+    It has the ability to add keyframes and other elements, and I'm gonna add exporting.
+                        </p>
+                        <a href="https://github.com/YourFurryDeveloper/FlowAnim/tree/main" target="_blank"><button id="projectlink">GitHub</button></a>
+                        <a href="https://yourfurrydeveloper.github.io/FlowAnim/" target="_blank"><button id="projectlink" style="margin-left: 10px;">Website</button></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="page3" class="mainpage snapto">
+                <div id="projcontainer">
+                    <br>
+                    <div id="imgprev">
+                        <img id="prev" class="projectpreviewimg" src="img/projects/freevector.png">
+                    </div>
+                    <div id="projectinfo">
+                        <h1 class="maintext">FreeVector</h1>
+                        <h2 class="maintext2">A simple and free SVG program</h2>
+                        <p id="projectdesc" class="maintext">
+    FreeVector is a pretty simple SVG program, with features like stroke type, size, saving, and more!
+
+    The way I made it was a little odd, beacuse I made it by detecting onmousemove on the actual svg element, and then generating a line.
+                        </p>
+                        <a href="https://github.com/YourFurryDeveloper/FlowAnim/tree/main" target="_blank"><button id="projectlink">GitHub</button></a>
+                        <a href="https://freevector.puter.com" target="_blank"><button id="projectlink" style="margin-left: 10px;">Website</button></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="page4" class="mainpage snapto">
+                <div id="projcontainer">
+                    <br>
+                    <div id="imgprev">
+                        <img id="prev" class="projectpreviewimg" src="img/projects/discord.png">
+                    </div>
+                    <div id="projectinfo">
+                        <h1 class="maintext">Discord Login</h1>
+                        <h2 class="maintext2">A recreation of the Discord login page</h2>
+                        <p id="projectdesc" class="maintext">
+    I made this beacuse I was bored, and also just wanted to practice my knowledge of CSS. <br><br> lol
+                        </p>
+                        <a href="https://github.com/YourFurryDeveloper/Discord-Login-CSS" target="_blank"><button id="projectlink">GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="page5" class="mainpage snapto">
+                <div id="projcontainer">
+                    <br>
+                    <div id="imgprev">
+                        <img id="prev" class="projectpreviewimg" src="img/projects/replwebz.png">
+                    </div>
+                    <div id="projectinfo">
+                        <h1 class="maintext">ReplWebz</h1>
+                        <h2 class="maintext2">A mock Internet</h2>
+                        <p id="projectdesc" class="maintext">
+I made this because I wanted my own little Internet to control and curate sites for. This obviously isn't by any means close to how the Internet works, since the way it works is it just serves static HTML files, but it's a cool example! :3 
+                        </p>
+                        <a href="https://replwebz.puter.com" target="_blank"><button id="projectlink">Website</button></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="page6" class="mainpage snapto">
+                <div id="projcontainer">
+                    <br>
+                    <div id="imgprev">
+                        <img id="prev" class="projectpreviewimg" src="img/projects/oreo.png">
+                    </div>
+                    <div id="projectinfo">
+                        <h1 class="maintext">Oreo Generator</h1>
+                        <h2 class="maintext2">Pretty self-explanatory lol</h2>
+                        <p id="projectdesc" class="maintext">
+A couple of my friends and I were sitting together eating lunch, and we were talking about accents and how British people say things. This SOMEHOW spiraled into me saying "OREREREREREREO," which made my friend (@ImNotNotUseless on YT) tell me that I should make an Oreo generator, so I whipped it up in 10 minutes, and the rest is history!
+                        </p>
+                        <a href="https://github.com/YourFurryDeveloper/OREREO/tree/main" target="_blank"><button id="projectlink">GitHub</button></a>
+                        <a href="https://orereo.puter.com" target="_blank"><button id="projectlink" style="margin-left: 10px;">Website</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="scrollbar">
+            <div id="scrollbarthumb"></div>-->
+        </div>
+        <img id="background" src="img/bg/bg.jpeg"></img>
+
+        <script>
+            let lastKnownScrollPosition = 0;
+            let ticking = false;
+            let scrolling = true
+
+            window.addEventListener('scroll', () => {
+                lastKnownScrollPosition = window.scrollY;
+
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        console.log(`Page scrolled to: ${lastKnownScrollPosition}px`);
+                        document.getElementById("background").style.top = -lastKnownScrollPosition / 5 + "px";
+                        //document.getElementById("scrollbarthumb").style.top = lastKnownScrollPosition / 5 + "px";
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script>
+    </body>
+</html>
