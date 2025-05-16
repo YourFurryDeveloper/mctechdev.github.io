@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles_projpage.css">
     </head>
 
-    <body>
+    <body onload="loadData()">
         <div id="topbar">
             <p id="sitename">McTechDev</p>
             <nav id="topnav">
@@ -35,7 +35,7 @@
         <script>
             function loadData() {
                 const urlParams = new URLSearchParams(window.location.search);
-                const name = urlParams.get("p");
+                const pname = urlParams.get("p");
                 const xmlUrl = 'https://raw.githubusercontent.com/username/repository/branch/projects.xml';
 
                 fetch(xmlUrl)
@@ -61,32 +61,35 @@
                 const projects = xmlDoc.getElementsByTagName('project');
                 const parsedProjects = [];
 
-                for (let i = 0; i < projects.length; i++) {
-                    const project = projects[i];
-                    const img = project.getElementsByTagName('img')[0].textContent;
-                    const name = project.getElementsByTagName('name')[0].textContent;
-                    const descshort = project.getElementsByTagName('descshort')[0].textContent;
-                    const desc = project.getElementsByTagName('desc')[0].textContent;
-                    const ghub = project.getElementsByTagName('ghub')[0];
-                    const site = project.getElementsByTagName('site')[0];
+                const project = projects[parseInt(pname)];
+                const img = project.getElementsByTagName('img')[0].textContent;
+                const name = project.getElementsByTagName('name')[0].textContent;
+                const descshort = project.getElementsByTagName('descshort')[0].textContent;
+                const desc = project.getElementsByTagName('desc')[0].textContent;
+                const ghub = project.getElementsByTagName('ghub')[0];
+                const site = project.getElementsByTagName('site')[0];
 
-                    const ghubShown = ghub.getAttribute('shown');
-                    const siteShown = site.getAttribute('shown');
+                const ghubShown = ghub.getAttribute('shown');
+                const siteShown = site.getAttribute('shown');
 
-                    document.getElementById("projtitle").innerHTML = name;
-                    document.getElementById("projdescshort").innerHTML = descshort;
-                    document.getElementById("projdesc").innerHTML = desc;
-                    document.getElementById("projimg").src = img;
+                document.getElementById("projtitle").innerHTML = name;
+                document.getElementById("projdescshort").innerHTML = descshort;
+                document.getElementById("projdesc").innerHTML = desc;
+                document.getElementById("projimg").src = img;
                     
-                    if (ghubShown === "yes") {
-                        document.getElementById("ghubbtn").href = ghub;
-                    }
+                if (ghubShown === "yes") {
+                    document.getElementById("ghubbtn").href = ghub;
+                } else {
+                    document.getElementById("ghubbtn").style.display = "none";
+                }
 
-                    if (siteShown === "yes") {
-                        document.getElementById("sitebtn").href = site;
-                    }
+                if (siteShown === "yes") {
+                    document.getElementById("sitebtn").href = site;
+                } else {
+                    document.getElementById("sitebtn").style.display = "none";
+                }
 
-                    const projectData = {
+                const projectData = {
                     img,
                     name,
                     descshort,
@@ -105,8 +108,6 @@
                 }
 
                 return parsedProjects;
-                }
-
             }
         </script>
     </body>
