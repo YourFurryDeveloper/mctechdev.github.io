@@ -1,0 +1,11 @@
+<projects>
+    <project>
+        <img>/img/retrochat.png</img>
+        <name>Retro Chat</name>
+        <urlname>retrochat</urlname>
+        <descshort>A really cool and simple retro chat site!</descshort>
+        <desc>I made this as a cool little web Socket.IO chat client with a retro feel, since retro sites are cool. :3 I designed this after a few things: the Apple II, old CRTs, and IRC clients. It is a simple mix between an online chatroom and an IRC client, all with the styling of a retro CRT. I wanted this to look and feel fun and retro, and I think I achieved it! I'm also obviously VERY proud of it!</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/RetroChat</ghub>
+        <site shown="yes">https://retrochat-5u83.onrender.com/</site>
+    </project>
+</projects>
