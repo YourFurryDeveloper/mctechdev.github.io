@@ -33,6 +33,7 @@
         </div>
 
         <script>
+            let test = "";
             function loadData() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const pname = urlParams.get("p");
@@ -68,6 +69,8 @@
                     const desc = project.getElementsByTagName('desc')[0].textContent;
                     const ghub = project.getElementsByTagName('ghub')[0];
                     const site = project.getElementsByTagName('site')[0];
+                    const ghublink = project.getElementsByTagName('ghub')[0].textContent;
+                    const sitelink = project.getElementsByTagName('site')[0].textContent;
 
                     const ghubShown = ghub ? ghub.getAttribute('shown') : "no"; // Handle case where ghub is not present
                     const siteShown = site ? site.getAttribute('shown') : "no"; // Handle case where site is not present
@@ -80,7 +83,7 @@
 
                     // Set GitHub button visibility and URL
                     if (ghubShown === "yes") {
-                        document.getElementById("ghubbtn").href = ghub.textContent;
+                        document.getElementById("ghubbtn").href = ghublink;
                         document.getElementById("ghubbtn").style.display = "inline"; // Ensure it's visible
                     } else {
                         document.getElementById("ghubbtn").style.display = "none";
@@ -88,7 +91,7 @@
 
                     // Set Site button visibility and URL
                     if (siteShown === "yes") {
-                        document.getElementById("sitebtn").href = site.textContent;
+                        document.getElementById("sitebtn").href = sitelink;
                         document.getElementById("sitebtn").style.display = "inline"; // Ensure it's visible
                     } else {
                         document.getElementById("sitebtn").style.display = "none";
