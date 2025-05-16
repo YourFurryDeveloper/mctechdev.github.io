@@ -41,7 +41,7 @@
                 fetch(xmlUrl)
                 .then(response => {
                     if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                        throw new Error('Network response was not ok');
                     }
                     return response.text();
                 })
@@ -55,59 +55,64 @@
                 });
 
                 function parseXML(xmlString) {
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
 
-                const projects = xmlDoc.getElementsByTagName('project');
-                const parsedProjects = [];
+                    const projects = xmlDoc.getElementsByTagName('project');
+                    const parsedProjects = [];
 
-                const project = projects[parseInt(pname)];
-                const img = project.getElementsByTagName('img')[0].textContent;
-                const name = project.getElementsByTagName('name')[0].textContent;
-                const descshort = project.getElementsByTagName('descshort')[0].textContent;
-                const desc = project.getElementsByTagName('desc')[0].textContent;
-                const ghub = project.getElementsByTagName('ghub')[0];
-                const site = project.getElementsByTagName('site')[0];
+                    const project = projects[parseInt(pname)];
+                    const img = project.getElementsByTagName('img')[0].textContent;
+                    const name = project.getElementsByTagName('name')[0].textContent;
+                    const descshort = project.getElementsByTagName('descshort')[0].textContent;
+                    const desc = project.getElementsByTagName('desc')[0].textContent;
+                    const ghub = project.getElementsByTagName('ghub')[0];
+                    const site = project.getElementsByTagName('site')[0];
 
-                const ghubShown = ghub.getAttribute('shown');
-                const siteShown = site.getAttribute('shown');
+                    const ghubShown = ghub ? ghub.getAttribute('shown') : "no"; // Handle case where ghub is not present
+                    const siteShown = site ? site.getAttribute('shown') : "no"; // Handle case where site is not present
 
-                document.getElementById("projtitle").innerHTML = name;
-                document.getElementById("projdescshort").innerHTML = descshort;
-                document.getElementById("projdesc").innerHTML = desc;
-                document.getElementById("projimg").src = img;
-                    
-                if (ghubShown === "yes") {
-                    document.getElementById("ghubbtn").href = ghub;
-                } else {
-                    document.getElementById("ghubbtn").style.display = "none";
-                }
+                    // Set project information in the DOM
+                    document.getElementById("projtitle").innerHTML = name;
+                    document.getElementById("projdescshort").innerHTML = descshort;
+                    document.getElementById("projdesc").innerHTML = desc;
+                    document.getElementById("projimg").src = img;
 
-                if (siteShown === "yes") {
-                    document.getElementById("sitebtn").href = site;
-                } else {
-                    document.getElementById("sitebtn").style.display = "none";
-                }
-
-                const projectData = {
-                    img,
-                    name,
-                    descshort,
-                    desc,
-                    ghub: {
-                        url: ghub.textContent,
-                        shown: ghubShown
-                    },
-                    site: {
-                        url: site.textContent,
-                        shown: siteShown
+                    // Set GitHub button visibility and URL
+                    if (ghubShown === "yes") {
+                        document.getElementById("ghubbtn").href = ghub.textContent;
+                        document.getElementById("ghubbtn").style.display = "inline"; // Ensure it's visible
+                    } else {
+                        document.getElementById("ghubbtn").style.display = "none";
                     }
+
+                    // Set Site button visibility and URL
+                    if (siteShown === "yes") {
+                        document.getElementById("sitebtn").href = site.textContent;
+                        document.getElementById("sitebtn").style.display = "inline"; // Ensure it's visible
+                    } else {
+                        document.getElementById("sitebtn").style.display = "none";
+                    }
+
+                    const projectData = {
+                        img,
+                        name,
+                        descshort,
+                        desc,
+                        ghub: {
+                            url: ghub ? ghub.textContent : "",
+                            shown: ghubShown
+                        },
+                        site: {
+                            url: site ? site.textContent : "",
+                            shown: siteShown
+                        }
                     };
 
                     parsedProjects.push(projectData);
-                }
 
-                return parsedProjects;
+                    return parsedProjects;
+                }
             }
         </script>
     </body>
