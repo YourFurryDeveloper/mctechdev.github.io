@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>McTechDev</title>
+        <link rel="stylesheet" href="styles_home.css">
+    </head>
+
+    <body onload="bootSequence()">
+        div id="bootscreen">
+            <span>Mr_McTech</span>
+            <br>
+            <br>
+            <br>
+            <span id="boot1">Version RP001</span>
+            <br>
+            <br>
+            <span id="boot2">PENTIUM ODP-MMX at 200MHz</span>
+            <br>
+            <span id="boot3">Memory Test : </span>
+            <br>
+            <br>
+            <span id="boot4">Detecting IDE Primary Master   ... None</span>
+            <br>
+            <span id="boot5">Booting...</span>
+        </div>
+
+        <div id="topbar">
+            <p id="sitename">McTechDev</p>
+            <nav id="topnav">
+                <a href=""><button id="navbtn">[Home]</button></a>
+                <a href=""><button id="navbtn">[Resources]</button></a>
+                <a href=""><button id="navbtn">[Old Site]</button></a>
+            </nav>
+        </div>
+
+        <div id="projcontainer" style="margin-top: 70px;">
+            <h1 id="containertitle">Featured Projects</h1>
+            <hr style="border-color: red;">
+            <div id="projholder">
+                <a href=""><div id="projbtn" style="background-image: url('img/projects/retrochat.png'); background-size: cover;">
+                    <p id="projcaption">RetroChat</p>
+                </div></a>
+                <a href=""><div id="projbtn" style="margin-left: 35px; background-image: url('img/projects/replwebz.png'); background-size: cover; background-position: center;">
+                    <p id="projcaption">ReplWebz</p>
+                </div></a>
+            </div>
+        </div>
+
+        <script>
+            function bootSequence() {
+                setTimeout(function() {
+                    document.getElementById("boot1").style.display = "unset";
+                    document.getElementById("boot2").style.display = "unset";
+
+                    setTimeout(function() {
+                        document.getElementById("boot3").style.display = "unset";
+                        for (let i = 0; i < 8193; i++) {
+                            setTimeout(function() {
+                                document.getElementById("boot3").innerHTML = "Memory Test : " + i + "M";
+                            }, 1000);
+                        }
+                        setTimeout(function() {
+                            document.getElementById("boot3").innerHTML = "Memory Test : 8192M OK";
+                            setTimeout(function() {
+                                document.getElementById("boot4").style.display = "unset";
+                                setTimeout(function() {
+                                    document.getElementById("boot5").style.display = "unset";
+                                    setTimeout(function() {
+                                        document.getElementById("bootscreen").style.display = "none";
+                                        document.getElementById("maincontent").style.display = "unset";
+                                    }, 1000)
+                                }, 500)
+                            }, 500)
+                        }, 1000)
+                    }, 1000);
+                }, 500);
+            }
+        </script>
+    </body>
+</html>
