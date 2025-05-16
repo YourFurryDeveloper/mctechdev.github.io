@@ -1,6 +1,6 @@
 <projects>
     <project>
-        <img>/img/retrochat.png</img>
+        <img>/img/projects/retrochat.png</img>
         <name>Retro Chat</name>
         <urlname>retrochat</urlname>
         <descshort>A really cool and simple retro chat site!</descshort>
