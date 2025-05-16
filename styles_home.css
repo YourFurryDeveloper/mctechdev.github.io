@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "ibmbios";
+    src: url('fonts/mainfont.ttf');
+}
+
+@font-face {
+    font-family: "mainfont2";
+    src: url('fonts/Ac437_Acer_VGA_8x8.ttf');
+}
+
+html {
+    font-family: "ibmbios";
+    /*background-color: rgb(30, 30, 30);*/
+    background-color: black;
+}
+
+#bootscreen {
+    font-size: 25px;
+    color: rgb(130, 130, 130);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 1000;
+}
+
+#boot1, #boot2, #boot3, #boot4, #boot5 {
+    display: none;
+}
+
+/* MAIN SITE */
+
+#topbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+}
+
+#sitename {
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#topnav {
+    display: flex;
+    justify-content: center;
+}
+
+#navbtn {
+    font-family: "ibmbios";
+    font-size: 15px;
+    color: rgb(230, 178, 74);
+    width: fit-content;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+}
+
+#navbtn:hover {
+    color: white;
+    background-color: rgb(230, 178, 74);
+}
+
+#projcontainer {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20px;
+}
+
+#containertitle {
+    font-family: mainfont2;
+    color: rgb(187, 128, 1);
+    font-size: 20px;
+}
+
+#projholder {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#projbtn {
+    margin-top: 25px;
+    size-adjust: initial;
+    width: 300px;
+    height: 300px;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
+}
+
+#projbtn:hover {
+    box-shadow: 10px 10px 0px 4px rgba(109, 152, 159, 0.57);
+    transform: scale(101%);
+}
+
+#projcaption {
+    text-align: center;
+    background-color: rgb(234, 92, 45);
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
