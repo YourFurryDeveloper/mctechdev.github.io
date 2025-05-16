@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "ibmbios";
+    src: url('fonts/mainfont.ttf');
+}
+
+@font-face {
+    font-family: "mainfont2";
+    src: url('fonts/Ac437_Acer_VGA_8x8.ttf');
+}
+
+@font-face {
+    font-family: "descfont";
+    src: url('fonts/descfont.ttf');
+}
+
+html {
+    font-family: "ibmbios";
+    background-color: black;
+}
+
+#topbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+}
+
+a {
+    text-decoration: none;
+}
+
+#sitename {
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#topnav {
+    display: flex;
+    justify-content: center;
+}
+
+#navbtn {
+    font-family: "ibmbios";
+    font-size: 15px;
+    color: rgb(230, 178, 74);
+    width: fit-content;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+}
+
+#navbtn:hover {
+    color: white;
+    background-color: rgb(230, 178, 74);
+}
+
+#projmainshow {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#projcontainer {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20px;
+}
+
+#projtitle {
+    font-family: mainfont2;
+    color: rgb(187, 128, 1);
+    font-size: 30px;
+}
+
+#projdescshort {
+    font-family: mainfont2;
+    color: rgb(151, 103, 0);
+    font-size: 20px;
+}
+
+#projdesc {
+    font-family: descfont;
+    color: rgb(197, 197, 197);
+    font-size: 20px;
+    width: 550px;
+}
+
+#projimg {
+    width: 700px;
+    margin-left: 30px;
+    box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
+}
+
+#descbtns {
+    width: fit-content;
+}
+
+#bottomnav {
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-top: 15px;
+}
+
+#ghubbtn, #sitebtn {
+    font-family: "ibmbios";
+    font-size: 15px;
+    color: rgb(230, 178, 74);
+    width: fit-content;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+    box-shadow: 4px 4px 0px 1px rgba(99,99,99,0.57);
+}
+
+#ghubbtn:hover, #sitebtn:hover {
+    color: white;
+    background-color: rgb(230, 178, 74);
+    box-shadow: 4px 4px 0px 1px rgba(114, 161, 177, 0.57);
+}
