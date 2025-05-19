@@ -47,6 +47,12 @@
             </div>
         </div>
 
+        <div id="mainprojcontainer" style="margin-top: 70px;">
+            <h1 id="containertitle">All My Projects</h1>
+            <hr style="border-color: red;">
+            <div id="mainprojholder"></div>
+        </div>
+
         <script>
             function bootSequence() {
                 const urlParams = new URLSearchParams(window.location.search);
@@ -84,6 +90,77 @@
                     document.getElementById("maincontent").style.display = "unset";
                 }
             }
+
+            loadProjects();
+
+            function loadProjects() {
+                const xmlUrl = 'https://raw.githubusercontent.com/YourFurryDeveloper/yourfurrydeveloper.github.io/refs/heads/main/projects.xml';
+
+                fetch(xmlUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(xmlString => {
+                        const projects = parseXML(xmlString);
+                        console.log(projects);
+                    })
+                    .catch(error => {
+                        console.error('There was a problem fetching the XML file:', error);
+                        alert('There was a problem fetching the project data: ' + error.message);
+                    });
+
+                function parseXML(xmlString) {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
+
+                    const projectNodes = xmlDoc.getElementsByTagName('project');
+
+                    for (let i = 0; i < projectNodes.length; i++) {
+                        const project = projectNodes[i];
+                        const img = project.getElementsByTagName('img')[0].textContent;
+                        const name = project.getElementsByTagName('name')[0].textContent;
+                        const descshort = project.getElementsByTagName('descshort')[0].textContent;
+                        const desc = project.getElementsByTagName('desc')[0].textContent;
+                        const ghublink = project.getElementsByTagName('ghub')[0]?.textContent || '';
+                        const sitelink = project.getElementsByTagName('site')[0]?.textContent || '';
+
+                        addProjectBtn([ name, img, i ]);
+                    }
+                }
+            }
+
+            function addProjectBtn(projectItems) {
+                const btnName = projectItems[0];
+                const btnImg = projectItems[1];
+                const btnLink = projectItems[2];
+
+                const link = document.createElement('a');
+                link.href = `projpage.html?p=${btnLink}`;
+
+                const btn = document.createElement('div');
+                btn.id = 'projbtn';
+                btn.style = `
+                    background-image: url('${btnImg}');
+                `;
+
+                const caption = document.createElement('p');
+                caption.id = 'projcaption';
+                caption.textContent = btnName;
+
+                btn.appendChild(caption);
+                link.appendChild(btn);
+
+                const container = document.getElementById('mainprojholder');
+                if (container) {
+                    container.appendChild(link);
+                } else {
+                    console.error('Container with ID "projects" not found.');
+                }
+            }
+
         </script>
     </body>
 </html>
