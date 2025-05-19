@@ -8,4 +8,56 @@
         <ghub shown="yes">https://github.com/YourFurryDeveloper/RetroChat</ghub>
         <site shown="yes">https://retrochat-5u83.onrender.com/</site>
     </project>
+
+    <project>
+        <img>/img/projects/flow.png</img>
+        <name>Flow</name>
+        <urlname>flowanim</urlname>
+        <descshort>A cool little web animator</descshort>
+        <desc>Flow is a little animator that I made, and I'm pretty proud of it! It has the ability to add keyframes and other elements, and I'm gonna add exporting.</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/FlowAnim</ghub>
+        <site shown="yes">https://yourfurrydeveloper.github.io/FlowAnim/</site>
+    </project>
+
+    <project>
+        <img>/img/projects/freevector.png</img>
+        <name>FreeVector</name>
+        <urlname>freevector</urlname>
+        <descshort>A simple and free SVG program</descshort>
+        <desc>FreeVector is a pretty simple SVG program, with features like stroke type, size, saving, and more! The way I made it was a little odd, beacuse I made it by detecting onmousemove on the actual svg element, and then generating a line.</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/FreeVector</ghub>
+        <site shown="yes">https://freevector.puter.com/</site>
+    </project>
+
+    <project>
+        <img>/img/projects/discord.png</img>
+        <name>Discord Login</name>
+        <urlname>dsclogin</urlname>
+        <descshort>A recreation of the Discord login page</descshort>
+        <desc>I made this beacuse I was bored, and also just wanted to practice my knowledge of CSS.
+
+lol</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/Discord-Login-CSS</ghub>
+        <site shown="no">https://freevector.puter.com/</site>
+    </project>
+
+    <project>
+        <img>/img/projects/replwebz.png</img>
+        <name>ReplWebz</name>
+        <urlname>replwebz</urlname>
+        <descshort>A mock Internet</descshort>
+        <desc>I made this because I wanted my own little Internet to control and curate sites for. This obviously isn't by any means close to how the Internet works, since the way it works is it just serves static HTML files, but it's a cool example! :3</desc>
+        <ghub shown="no">https://github.com/YourFurryDeveloper/Discord-Login-CSS</ghub>
+        <site shown="yes">https://replwebz.puter.com/</site>
+    </project>
+
+    <project>
+        <img>/img/projects/oreo.png</img>
+        <name>Oreo Generator</name>
+        <urlname>orereo</urlname>
+        <descshort>Pretty self-explanatory lol</descshort>
+        <desc>A couple of my friends and I were sitting together eating lunch, and we were talking about accents and how British people say things. This SOMEHOW spiraled into me saying "OREREREREREREO," which made my friend (@ImNotNotUseless on YT) tell me that I should make an Oreo generator, so I whipped it up in 10 minutes, and the rest is history!</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/OREREO</ghub>
+        <site shown="yes">https://orereo.puter.com/</site>
+    </project>
 </projects>
