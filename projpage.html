@@ -24,8 +24,8 @@
                 <div id="descbtns">
                     <p id="projdesc"></p>
                     <div id="bottomnav">
-                        <a href="" target="_blank"><button id="ghubbtn">[GitHub]</button></a>
-                        <a href="" target="_blank"><button id="sitebtn">[Website]</button></a>
+                        <a href="" target="_blank" id="ghublink"><button id="ghubbtn">[GitHub]</button></a>
+                        <a href="" target="_blank" id="sitelink"><button id="sitebtn">[Website]</button></a>
                     </div>
                 </div>
                 <img id="projimg" src="">
@@ -83,7 +83,7 @@
 
                     // Set GitHub button visibility and URL
                     if (ghubShown === "yes") {
-                        document.getElementById("ghubbtn").href = ghublink;
+                        document.getElementById("ghublink").href = ghublink;
                         document.getElementById("ghubbtn").style.display = "inline"; // Ensure it's visible
                     } else {
                         document.getElementById("ghubbtn").style.display = "none";
@@ -91,7 +91,7 @@
 
                     // Set Site button visibility and URL
                     if (siteShown === "yes") {
-                        document.getElementById("sitebtn").href = sitelink;
+                        document.getElementById("sitelink").href = sitelink;
                         document.getElementById("sitebtn").style.display = "inline"; // Ensure it's visible
                     } else {
                         document.getElementById("sitebtn").style.display = "none";
