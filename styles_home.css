@@ -74,7 +74,7 @@ html {
     background-color: rgb(230, 178, 74);
 }
 
-#projcontainer {
+#projcontainer, #mainprojcontainer {
     width: fit-content;
     height: fit-content;
     margin-left: 20px;
@@ -86,7 +86,7 @@ html {
     font-size: 20px;
 }
 
-#projholder {
+#projholder, #mainprojholder {
     display: flex;
     justify-content: flex-start;
 }
