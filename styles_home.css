@@ -111,6 +111,9 @@ html::-webkit-scrollbar-thumb {
     size-adjust: initial;
     width: 300px;
     height: 300px;
+    /*flex: 1 1 300px;*/
+    /*width: calc(100vw / 6);*/
+    /*height: calc(100vw / 6);*/
     transition: 0.2s;
     cursor: pointer;
     box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
@@ -131,4 +134,9 @@ html::-webkit-scrollbar-thumb {
 
 a {
     text-decoration: none;
+}
+
+#smallbio {
+    color: white;
+    font-family: mainfont2;
 }
