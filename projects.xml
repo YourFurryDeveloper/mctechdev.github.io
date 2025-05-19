@@ -60,4 +60,14 @@ lol</desc>
         <ghub shown="yes">https://github.com/YourFurryDeveloper/OREREO</ghub>
         <site shown="yes">https://orereo.puter.com/</site>
     </project>
+
+    <project>
+        <img>/img/projects/infinitelibrary.png</img>
+        <name>The Infinite Library</name>
+        <urlname>infinitelibrary</urlname>
+        <descshort>An odd-feeling liminal space</descshort>
+        <desc>I have recently kinda been obsessed with liminal spaces lately, so I decided to make The Infinite Library. I do still OBVIOUSLY know it's an already existing thing lol, but I'm VERY proud of this, because it is truly infinite. It generates a room every time you get close, but it is still a MASSIVE WIP.</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/Infinite-Library/</ghub>
+        <site shown="yes">https://yourfurrydeveloper.github.io/Infinite-Library/</site>
+    </project>
 </projects>
