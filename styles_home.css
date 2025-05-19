@@ -89,6 +89,7 @@ html {
 #projholder, #mainprojholder {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 #projbtn {
