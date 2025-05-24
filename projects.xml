@@ -10,6 +10,16 @@
     </project>
 
     <project>
+        <img>/img/projects/rpsai.png</img>
+        <name>RPS AI</name>
+        <urlname>rpsai</urlname>
+        <descshort>A very simple Rock, Paper, Scissors AI vs AI written in Python</descshort>
+        <desc>The code is super simple, since Rock Paper Scissors is basically just a comparison of numbers. Rock beats scissors, paper beats rock, and scissors beats paper. We can put this into a list: \n["rock", "paper", "scissors"] \nThen index the list, where rock is 0, paper is 1, and scissors is 2. Then have each AI pick a random one and compare them to see if one is bigger than the other, and determine the winner!</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/Simple-RPS-AI</ghub>
+        <site shown="no">https://yourfurrydeveloper.github.io/FlowAnim/</site>
+    </project>
+
+    <project>
         <img>/img/projects/flow.png</img>
         <name>Flow</name>
         <urlname>flowanim</urlname>
